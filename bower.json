@@ -1,0 +1,24 @@
+{
+  "name": "jc-testDirective",
+  "version":"0.0.0",
+  "homepage": "https://github.com/chouchua/testBower",
+  "authors": [
+    "Jimmy Chou <chuankengchou@gmail.com>"
+  ],
+  "description": "",
+  "main": "directive.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    ".bowerrc",
+    "gulp.js"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7"
+  }
+}
