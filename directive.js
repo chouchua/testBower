@@ -1,8 +1,8 @@
-angular.module('testDirective',[]).
+angular.module('jcMedia',[]).
 directive('jcMediaBox',function(){
     return {
-        template:"<footer><ul ng-repeat = 'link in links'><li><i ng-class = 'link.class'>{{link}}</i></li></ul></footer>",
-        //templateUrl:'template.html',
+        template:"<footer><ul><li ng-repeat = 'link in links'><span class = 'fa-stack'><i class='fa fa-circle fa-stack-2x'></i><i ng-class = 'link.class'></i></span></li></ul></footer>",
+        // templateUrl:'template.html',
         restrict:"E",
         scope:{
             links:"=socialProfiles"
@@ -12,9 +12,8 @@ directive('jcMediaBox',function(){
             
         },
         controller: function($scope,$element,$attrs){
-            console.log($scope.links);
             var links = [];
-            var supportedMedia = {facebook:"fa fa-facebook",twitter:'fa fa-twitter'};
+            var supportedMedia = {facebook:"fa fa-facebook fa-stack-1x fa-inverse",twitter:'fa fa-twitter fa-stack-1x fa-inverse'};
             
             $scope.links.forEach(function(link){
                 for(var media in link){
@@ -29,7 +28,5 @@ directive('jcMediaBox',function(){
                 //console.log(link.class);
             })
         }
-        //controller:"",
-        //controllerAs:""
     }
 });

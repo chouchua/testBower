@@ -1,4 +1,4 @@
-This module introduces an extensive social media directive.
+This module exposes an extensible social media directive.
 
 Put 'jcMediaBox' as an dependency of your application. 
 Eg. angular.module('yourApp',['jcMediaBox']);
@@ -11,3 +11,16 @@ If you want to link your facebook and twitter account, feed the following object
     facebook:"",
     twitter:""
 }
+
+```html 
+<div ng-app = "jcMedia">
+    <div ng-init = "social = [{facebook:'yourFacebookUrl'},{twitter:'yourTwitterUrl'}]">
+        <jc-media-box social-profiles = 'social' ></jc-media-box>
+    </div>
+</div>
+
+```
+Requirements:
+- angularJS
+
+For more details, please check out the test.html to see how to use this directive.
